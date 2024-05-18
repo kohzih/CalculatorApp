@@ -49,6 +49,9 @@
     <Compile Include="Models\BaseButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Models\DerivedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
