@@ -57,6 +57,7 @@
     <Compile Include="Models\IOperation.cs" />
     <Compile Include="Models\MultiplicationOperation.cs" />
     <Compile Include="Models\SubtractionOperation.cs" />
+    <Compile Include="ViewModels\CalculatorViewModel.cs" />
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
