@@ -6,11 +6,13 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using log4net;
 
 namespace CalculatorApp.ViewModels
 {
     internal class CalculatorViewModel : INotifyPropertyChanged
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(CalculatorViewModel));
         private double _currentValue;
         private string _displayText;
         private IOperation _currentOperation;
@@ -35,6 +37,7 @@ namespace CalculatorApp.ViewModels
         public void EnterNumber(string number)
         {
             DisplayText += number;
+            log.Debug($"Entered number: {number}");
         }
 
         public void SetOperation(IOperation operation, string operationSymbol)
@@ -42,6 +45,7 @@ namespace CalculatorApp.ViewModels
             _currentOperation = operation;
             _currentValue = double.Parse(DisplayText);
             DisplayText = string.Empty;
+            log.Debug($"Set operation: {operationSymbol} with current value: {_currentValue}");
         }
 
         public void Calculate()
@@ -50,7 +54,8 @@ namespace CalculatorApp.ViewModels
             {
                 double newValue = double.Parse(DisplayText);
                 double result = _currentOperation.Execute(_currentValue, newValue);
-                DisplayText = result.ToString("F5");
+                log.Debug($"Calculated result: {_currentValue} {_currentOperation.GetType().Name} {newValue} = {result}");
+                DisplayText = (result == (int)result) ? result.ToString() : result.ToString("F5");
                 _currentOperation = null;
             }
         }
