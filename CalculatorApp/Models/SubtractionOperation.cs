@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalculatorApp.Models
 {
-    internal class SubtractionOperation
+    internal class SubtractionOperation : IOperation
     {
         public double Execute(double left, double right)
         {

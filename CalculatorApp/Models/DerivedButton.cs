@@ -12,6 +12,7 @@ namespace CalculatorApp.Models
     {
         private string _displayText;
 
+        [System.ComponentModel.Browsable(true)]
         [Category("Custom Properties")]
         [Description("表示文字")]
         public string DisplayText

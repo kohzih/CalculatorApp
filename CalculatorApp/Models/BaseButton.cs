@@ -12,7 +12,7 @@ namespace CalculatorApp.Models
     {
         public BaseButton()
         {
-            this.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Size = new System.Drawing.Size(50, 50);
             this.Margin = new Padding(5);
         }
