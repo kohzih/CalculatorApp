@@ -46,12 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AdditionOperation.cs" />
     <Compile Include="Models\BaseButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Models\DerivedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Models\DivisionOperation.cs" />
+    <Compile Include="Models\IOperation.cs" />
+    <Compile Include="Models\MultiplicationOperation.cs" />
+    <Compile Include="Models\SubtractionOperation.cs" />
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
