@@ -21,7 +21,7 @@ namespace CalculatorApp
         {
             InitializeComponent();
             _viewModel = new CalculatorViewModel();
-            DisplayTextBox.DataBindings.Add(new Binding("Text", _viewModel, "DisplayText", false, DataSourceUpdateMode.OnPropertyChanged));
+            txtDisplay.DataBindings.Add(new Binding("Text", _viewModel, "DisplayText", false, DataSourceUpdateMode.OnPropertyChanged));
 
             btnAdd.Click += OperatorButton_Click;
             btnSubtract.Click += OperatorButton_Click;
@@ -51,7 +51,7 @@ namespace CalculatorApp
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(MainForm_KeyDown);
             // テキストボックスへのフォーカスは他のコントロールに移す
-            DisplayTextBox.Enter += Display_Enter;
+            txtDisplay.Enter += Display_Enter;
         }
 
         private void Display_Enter(object sender, EventArgs e)

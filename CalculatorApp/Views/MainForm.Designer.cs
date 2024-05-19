@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.DisplayTextBox = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtDisplay = new System.Windows.Forms.TextBox();
+            this.tlpCalculatorLayout = new System.Windows.Forms.TableLayoutPanel();
             this.btnBackspace = new CalculatorApp.Models.CalculatorButton();
             this.btnClear = new CalculatorApp.Models.CalculatorButton();
             this.btnAllClear = new CalculatorApp.Models.CalculatorButton();
@@ -50,64 +50,64 @@
             this.btnNumber0 = new CalculatorApp.Models.CalculatorButton();
             this.btnDecimal = new CalculatorApp.Models.CalculatorButton();
             this.btnEquals = new CalculatorApp.Models.CalculatorButton();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpCalculatorLayout.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DisplayTextBox
+            // txtDisplay
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.DisplayTextBox, 4);
-            this.DisplayTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DisplayTextBox.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.DisplayTextBox.Location = new System.Drawing.Point(3, 3);
-            this.DisplayTextBox.Name = "DisplayTextBox";
-            this.DisplayTextBox.ReadOnly = true;
-            this.DisplayTextBox.Size = new System.Drawing.Size(572, 103);
-            this.DisplayTextBox.TabIndex = 0;
-            this.DisplayTextBox.TabStop = false;
-            this.DisplayTextBox.Text = "0";
-            this.DisplayTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tlpCalculatorLayout.SetColumnSpan(this.txtDisplay, 4);
+            this.txtDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDisplay.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtDisplay.Location = new System.Drawing.Point(3, 3);
+            this.txtDisplay.Name = "txtDisplay";
+            this.txtDisplay.ReadOnly = true;
+            this.txtDisplay.Size = new System.Drawing.Size(572, 103);
+            this.txtDisplay.TabIndex = 0;
+            this.txtDisplay.TabStop = false;
+            this.txtDisplay.Text = "0";
+            this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tableLayoutPanel1
+            // tlpCalculatorLayout
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.btnBackspace, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnClear, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnAllClear, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnDivide, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnMultiply, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnNumber7, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnNumber8, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnNumber9, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnNumber4, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnNumber5, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnNumber6, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnSubtract, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnNumber1, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnNumber2, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnNumber3, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnAdd, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnNumber0, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.btnDecimal, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.btnEquals, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.DisplayTextBox, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(578, 644);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.tlpCalculatorLayout.ColumnCount = 4;
+            this.tlpCalculatorLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpCalculatorLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpCalculatorLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpCalculatorLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpCalculatorLayout.Controls.Add(this.btnBackspace, 3, 1);
+            this.tlpCalculatorLayout.Controls.Add(this.btnClear, 1, 1);
+            this.tlpCalculatorLayout.Controls.Add(this.btnAllClear, 2, 1);
+            this.tlpCalculatorLayout.Controls.Add(this.btnDivide, 3, 2);
+            this.tlpCalculatorLayout.Controls.Add(this.btnMultiply, 3, 3);
+            this.tlpCalculatorLayout.Controls.Add(this.btnNumber7, 0, 3);
+            this.tlpCalculatorLayout.Controls.Add(this.btnNumber8, 1, 3);
+            this.tlpCalculatorLayout.Controls.Add(this.btnNumber9, 2, 3);
+            this.tlpCalculatorLayout.Controls.Add(this.btnNumber4, 0, 4);
+            this.tlpCalculatorLayout.Controls.Add(this.btnNumber5, 1, 4);
+            this.tlpCalculatorLayout.Controls.Add(this.btnNumber6, 2, 4);
+            this.tlpCalculatorLayout.Controls.Add(this.btnSubtract, 3, 4);
+            this.tlpCalculatorLayout.Controls.Add(this.btnNumber1, 0, 5);
+            this.tlpCalculatorLayout.Controls.Add(this.btnNumber2, 1, 5);
+            this.tlpCalculatorLayout.Controls.Add(this.btnNumber3, 2, 5);
+            this.tlpCalculatorLayout.Controls.Add(this.btnAdd, 3, 5);
+            this.tlpCalculatorLayout.Controls.Add(this.btnNumber0, 1, 6);
+            this.tlpCalculatorLayout.Controls.Add(this.btnDecimal, 2, 6);
+            this.tlpCalculatorLayout.Controls.Add(this.btnEquals, 3, 6);
+            this.tlpCalculatorLayout.Controls.Add(this.txtDisplay, 0, 0);
+            this.tlpCalculatorLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpCalculatorLayout.Location = new System.Drawing.Point(0, 0);
+            this.tlpCalculatorLayout.Name = "tlpCalculatorLayout";
+            this.tlpCalculatorLayout.RowCount = 7;
+            this.tlpCalculatorLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16F));
+            this.tlpCalculatorLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tlpCalculatorLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tlpCalculatorLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tlpCalculatorLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tlpCalculatorLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tlpCalculatorLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tlpCalculatorLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpCalculatorLayout.Size = new System.Drawing.Size(578, 644);
+            this.tlpCalculatorLayout.TabIndex = 2;
             // 
             // btnBackspace
             // 
@@ -342,13 +342,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 644);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tlpCalculatorLayout);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "電卓";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tlpCalculatorLayout.ResumeLayout(false);
+            this.tlpCalculatorLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -356,8 +356,8 @@
         #endregion
 
         private Models.CalculatorButton  btnBackspace;
-        private System.Windows.Forms.TextBox DisplayTextBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox txtDisplay;
+        private System.Windows.Forms.TableLayoutPanel tlpCalculatorLayout;
         private Models.CalculatorButton  btnClear;
         private Models.CalculatorButton  btnAllClear;
         private Models.CalculatorButton  btnDivide;
