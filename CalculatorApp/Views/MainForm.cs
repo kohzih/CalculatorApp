@@ -43,6 +43,7 @@ namespace CalculatorApp
 
             btnClear.Click += ClearButton_Click;
             btnAllClear.Click += AllClearButton_Click;
+            btnBackspace.Click += BackspaceButton_Click;
         }
 
         private void NumberButton_Click(object sender, EventArgs e)
@@ -87,6 +88,11 @@ namespace CalculatorApp
         private void AllClearButton_Click(object sender, EventArgs e)
         {
             _viewModel.AllClear();
+        }
+
+        private void BackspaceButton_Click(object sender, EventArgs e)
+        {
+            _viewModel.Backspace();
         }
     }
 }

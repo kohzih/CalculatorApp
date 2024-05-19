@@ -30,7 +30,7 @@
         {
             this.DisplayTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDelete = new CalculatorApp.Models.DerivedButton();
+            this.btnBackspace = new CalculatorApp.Models.DerivedButton();
             this.btnClear = new CalculatorApp.Models.DerivedButton();
             this.btnAllClear = new CalculatorApp.Models.DerivedButton();
             this.btnDivide = new CalculatorApp.Models.DerivedButton();
@@ -71,7 +71,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.btnDelete, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnBackspace, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnClear, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnAllClear, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnDivide, 3, 2);
@@ -106,17 +106,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(812, 754);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // btnDelete
+            // btnBackspace
             // 
-            this.btnDelete.DisplayText = "←";
-            this.btnDelete.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnDelete.Location = new System.Drawing.Point(614, 125);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(5);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(193, 95);
-            this.btnDelete.TabIndex = 0;
-            this.btnDelete.Text = "←";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnBackspace.DisplayText = "←";
+            this.btnBackspace.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnBackspace.Location = new System.Drawing.Point(614, 125);
+            this.btnBackspace.Margin = new System.Windows.Forms.Padding(5);
+            this.btnBackspace.Name = "btnBackspace";
+            this.btnBackspace.Size = new System.Drawing.Size(193, 95);
+            this.btnBackspace.TabIndex = 0;
+            this.btnBackspace.Text = "←";
+            this.btnBackspace.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
@@ -351,7 +351,7 @@
 
         #endregion
 
-        private Models.DerivedButton btnDelete;
+        private Models.DerivedButton btnBackspace;
         private System.Windows.Forms.TextBox DisplayTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Models.DerivedButton btnClear;

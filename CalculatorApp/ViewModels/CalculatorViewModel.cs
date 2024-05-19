@@ -18,8 +18,8 @@ namespace CalculatorApp.ViewModels
         private double _currentValue;
         private double _newValue;
         private string _displayText;
-        private bool _isNewEntry = true;
-        private bool _isNewOperationButtonPressed = false;
+        private bool _isEnteringNumber = true;
+        private bool _isOperationButtonPressed = false;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -40,10 +40,10 @@ namespace CalculatorApp.ViewModels
 
         public void EnterNumber(string number)
         {
-            if (!_isNewEntry)
+            if (!_isEnteringNumber)
             {
                 DisplayText = string.Empty;
-                _isNewEntry = true;
+                _isEnteringNumber = true;
             }
 
             DisplayText += number;
@@ -57,7 +57,7 @@ namespace CalculatorApp.ViewModels
                 return;
             }
 
-            if (_isNewEntry)
+            if (_isEnteringNumber)
             {
                 Calculate();
             }
@@ -65,8 +65,8 @@ namespace CalculatorApp.ViewModels
             _currentOperation = operation;
             _currentValue = double.Parse(DisplayText);
 
-            _isNewEntry = false;
-            _isNewOperationButtonPressed = true;
+            _isEnteringNumber = false;
+            _isOperationButtonPressed = true;
             log.Debug($"Set operation: {operationSymbol} with current value: {_currentValue}");
         }
 
@@ -77,7 +77,7 @@ namespace CalculatorApp.ViewModels
                 return;
             }
 
-            if (_isNewEntry || _isNewOperationButtonPressed)
+            if (_isEnteringNumber || _isOperationButtonPressed)
             {
                 _newValue = double.Parse(DisplayText);
             }
@@ -86,15 +86,15 @@ namespace CalculatorApp.ViewModels
             log.Debug($"Calculated result: {_currentValue} {_currentOperation.GetType().Name} {_newValue} = {result}");
             DisplayText = (result == (int)result) ? result.ToString() : result.ToString("F5");
             _currentValue = result;
-            _isNewEntry = false;
-            _isNewOperationButtonPressed = false;
+            _isEnteringNumber = false;
+            _isOperationButtonPressed = false;
         }
 
         public void Clear()
         {
             DisplayText = "0";
             _currentValue = 0;
-            _isNewEntry = false;
+            _isEnteringNumber = false;
             log.Debug("Cleared current entry");
         }
 
@@ -104,9 +104,20 @@ namespace CalculatorApp.ViewModels
             _currentValue = 0;
             _currentOperation = null;
             _newValue = 0;
-            _isNewEntry = false;
-            _isNewOperationButtonPressed = false;
+            _isEnteringNumber = false;
+            _isOperationButtonPressed = false;
             log.Debug("All cleared");
+        }
+
+        public void Backspace()
+        {
+            if (!_isEnteringNumber)
+            {
+                return;
+            }
+
+            DisplayText = DisplayText.Length > 1 ? DisplayText.Substring(0, DisplayText.Length - 1) : "0";
+            log.Debug("Backspace pressed");
         }
 
         protected void OnPropertyChanged([CallerMemberName] string name = null)
