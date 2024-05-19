@@ -110,14 +110,14 @@
             // 
             // btnBackspace
             // 
-            this.btnBackspace.DisplayText = "←";
+            this.btnBackspace.DisplayText = "";
             this.btnBackspace.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnBackspace.Image = global::CalculatorApp.Properties.Resources.backspace;
             this.btnBackspace.Location = new System.Drawing.Point(437, 108);
             this.btnBackspace.Margin = new System.Windows.Forms.Padding(5);
             this.btnBackspace.Name = "btnBackspace";
             this.btnBackspace.Size = new System.Drawing.Size(136, 80);
             this.btnBackspace.TabIndex = 3;
-            this.btnBackspace.Text = "←";
             this.btnBackspace.UseVisualStyleBackColor = true;
             // 
             // btnClear
