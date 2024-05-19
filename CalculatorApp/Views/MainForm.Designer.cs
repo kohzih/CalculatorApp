@@ -47,7 +47,7 @@
             this.btnNumber3 = new CalculatorApp.Models.DerivedButton();
             this.btnAdd = new CalculatorApp.Models.DerivedButton();
             this.btnNumber0 = new CalculatorApp.Models.DerivedButton();
-            this.btnDot = new CalculatorApp.Models.DerivedButton();
+            this.btnDecimal = new CalculatorApp.Models.DerivedButton();
             this.btnEquals = new CalculatorApp.Models.DerivedButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +88,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnNumber3, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.btnAdd, 3, 5);
             this.tableLayoutPanel1.Controls.Add(this.btnNumber0, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.btnDot, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnDecimal, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnEquals, 3, 6);
             this.tableLayoutPanel1.Controls.Add(this.DisplayTextBox, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -168,7 +168,7 @@
             // 
             // btnNumber7
             // 
-            this.btnNumber7.DisplayText = null;
+            this.btnNumber7.DisplayText = "7";
             this.btnNumber7.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnNumber7.Location = new System.Drawing.Point(5, 335);
             this.btnNumber7.Margin = new System.Windows.Forms.Padding(5);
@@ -310,17 +310,17 @@
             this.btnNumber0.Text = "0";
             this.btnNumber0.UseVisualStyleBackColor = true;
             // 
-            // btnDot
+            // btnDecimal
             // 
-            this.btnDot.DisplayText = "．";
-            this.btnDot.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnDot.Location = new System.Drawing.Point(411, 650);
-            this.btnDot.Margin = new System.Windows.Forms.Padding(5);
-            this.btnDot.Name = "btnDot";
-            this.btnDot.Size = new System.Drawing.Size(193, 99);
-            this.btnDot.TabIndex = 20;
-            this.btnDot.Text = "．";
-            this.btnDot.UseVisualStyleBackColor = true;
+            this.btnDecimal.DisplayText = "．";
+            this.btnDecimal.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnDecimal.Location = new System.Drawing.Point(411, 650);
+            this.btnDecimal.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDecimal.Name = "btnDecimal";
+            this.btnDecimal.Size = new System.Drawing.Size(193, 99);
+            this.btnDecimal.TabIndex = 20;
+            this.btnDecimal.Text = "．";
+            this.btnDecimal.UseVisualStyleBackColor = true;
             // 
             // btnEquals
             // 
@@ -370,7 +370,7 @@
         private Models.DerivedButton btnNumber3;
         private Models.DerivedButton btnAdd;
         private Models.DerivedButton btnNumber0;
-        private Models.DerivedButton btnDot;
+        private Models.DerivedButton btnDecimal;
         private Models.DerivedButton btnEquals;
     }
 }

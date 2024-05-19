@@ -39,6 +39,8 @@ namespace CalculatorApp
             btnNumber8.Click += NumberButton_Click;
             btnNumber9.Click += NumberButton_Click;
 
+            btnDecimal.Click += DecimalButton_Click;
+
             btnEquals.Click += EqualsButton_Click;
 
             btnClear.Click += ClearButton_Click;
@@ -50,6 +52,11 @@ namespace CalculatorApp
         {
             var button = sender as DerivedButton;
             _viewModel.EnterNumber(button.DisplayText);
+        }
+
+        private void DecimalButton_Click(object sender, EventArgs e)
+        {
+            _viewModel.EnterDecimal();
         }
 
         private void OperatorButton_Click(object sender, EventArgs e)

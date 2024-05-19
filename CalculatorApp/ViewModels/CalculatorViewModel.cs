@@ -18,14 +18,14 @@ namespace CalculatorApp.ViewModels
         private double _currentValue;
         private double _newValue;
         private string _displayText;
-        private bool _isEnteringNumber = true;
+        private bool _isEnteringNumber = false;
         private bool _isOperationButtonPressed = false;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public CalculatorViewModel()
         {
-            DisplayText = string.Empty;
+            DisplayText = "0";
         }
 
         public string DisplayText
@@ -48,6 +48,16 @@ namespace CalculatorApp.ViewModels
 
             DisplayText += number;
             log.Debug($"Entered number: {number}");
+        }
+
+        public void EnterDecimal()
+        {
+            if (!DisplayText.Contains("."))
+            {
+                DisplayText += ".";
+                _isEnteringNumber = true;
+            }
+            log.Debug("Entered decimal point");
         }
 
         public void SetOperation(IOperation operation, string operationSymbol)
@@ -84,7 +94,7 @@ namespace CalculatorApp.ViewModels
 
             double result = _currentOperation.Execute(_currentValue, _newValue);
             log.Debug($"Calculated result: {_currentValue} {_currentOperation.GetType().Name} {_newValue} = {result}");
-            DisplayText = (result == (int)result) ? result.ToString() : result.ToString("F5");
+            DisplayText = (result == (int)result) ? result.ToString() : result.ToString("0.#####");
             _currentValue = result;
             _isEnteringNumber = false;
             _isOperationButtonPressed = false;
