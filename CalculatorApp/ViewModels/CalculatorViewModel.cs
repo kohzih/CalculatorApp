@@ -40,7 +40,12 @@ namespace CalculatorApp.ViewModels
 
         public void EnterNumber(string number)
         {
-            if (!_isEnteringNumber)
+            if (DisplayText == "0" && number == "0")
+            {
+                _isEnteringNumber = false;
+            }
+
+            if (DisplayText == "0" || !_isEnteringNumber)
             {
                 DisplayText = string.Empty;
                 _isEnteringNumber = true;
