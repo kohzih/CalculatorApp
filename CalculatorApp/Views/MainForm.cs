@@ -46,6 +46,10 @@ namespace CalculatorApp
             btnClear.Click += ClearButton_Click;
             btnAllClear.Click += AllClearButton_Click;
             btnBackspace.Click += BackspaceButton_Click;
+
+            // キーボードイベント処理を有効にする
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(MainForm_KeyDown);
         }
 
         private void NumberButton_Click(object sender, EventArgs e)
@@ -100,6 +104,74 @@ namespace CalculatorApp
         private void BackspaceButton_Click(object sender, EventArgs e)
         {
             _viewModel.Backspace();
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            // Enterキー押下は計算ボタン押下として扱う
+            if (keyData == Keys.Enter)
+            {
+                MainForm_KeyDown(this, new KeyEventArgs(keyData));
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            // 数字キーの処理
+            if (e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9)
+            {
+                _viewModel.EnterNumber((e.KeyCode - Keys.D0).ToString());
+            }
+            else if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
+            {
+                _viewModel.EnterNumber((e.KeyCode - Keys.NumPad0).ToString());
+            }
+            // 小数点キーの処理
+            else if (e.KeyCode == Keys.Decimal || e.KeyCode == Keys.OemPeriod)
+            {
+                _viewModel.EnterDecimal();
+            }
+            // 演算子キーの処理
+            else if (e.KeyCode == Keys.Add || e.KeyCode == Keys.Oemplus && e.Shift)
+            {
+                _viewModel.SetOperation(new AdditionOperation(), btnAdd.DisplayText);
+            }
+            else if (e.KeyCode == Keys.Subtract || e.KeyCode == Keys.OemMinus && !e.Shift)
+            {
+                _viewModel.SetOperation(new SubtractionOperation(), btnSubtract.DisplayText);
+            }
+            else if (e.KeyCode == Keys.Multiply || e.KeyCode == Keys.Oem1 && e.Shift)
+            {
+                _viewModel.SetOperation(new MultiplicationOperation(), btnMultiply.DisplayText);
+            }
+            else if (e.KeyCode == Keys.Divide || e.KeyCode == Keys.OemQuestion && !e.Shift)
+            {
+                _viewModel.SetOperation(new DivisionOperation(), btnDivide.DisplayText);
+            }
+            // 等号キーの処理
+            else if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Oemplus)
+            {
+                _viewModel.Calculate();
+            }
+            // バックスペースキーの処理
+            else if (e.KeyCode == Keys.Back)
+            {
+                _viewModel.Backspace();
+            }
+            // クリアキーの処理
+            else if (e.KeyCode == Keys.Delete)
+            {
+                _viewModel.Clear();
+            }
+            // オールクリアキーの処理
+            else if (e.KeyCode == Keys.Escape)
+            {
+                _viewModel.AllClear();
+            }
+
+            e.Handled = true;
         }
     }
 }
