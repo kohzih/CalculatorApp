@@ -30,25 +30,25 @@
         {
             this.DisplayTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnBackspace = new CalculatorApp.Models.DerivedButton();
-            this.btnClear = new CalculatorApp.Models.DerivedButton();
-            this.btnAllClear = new CalculatorApp.Models.DerivedButton();
-            this.btnDivide = new CalculatorApp.Models.DerivedButton();
-            this.btnMultiply = new CalculatorApp.Models.DerivedButton();
-            this.btnNumber7 = new CalculatorApp.Models.DerivedButton();
-            this.btnNumber8 = new CalculatorApp.Models.DerivedButton();
-            this.btnNumber9 = new CalculatorApp.Models.DerivedButton();
-            this.btnNumber4 = new CalculatorApp.Models.DerivedButton();
-            this.btnNumber5 = new CalculatorApp.Models.DerivedButton();
-            this.btnNumber6 = new CalculatorApp.Models.DerivedButton();
-            this.btnSubtract = new CalculatorApp.Models.DerivedButton();
-            this.btnNumber1 = new CalculatorApp.Models.DerivedButton();
-            this.btnNumber2 = new CalculatorApp.Models.DerivedButton();
-            this.btnNumber3 = new CalculatorApp.Models.DerivedButton();
-            this.btnAdd = new CalculatorApp.Models.DerivedButton();
-            this.btnNumber0 = new CalculatorApp.Models.DerivedButton();
-            this.btnDecimal = new CalculatorApp.Models.DerivedButton();
-            this.btnEquals = new CalculatorApp.Models.DerivedButton();
+            this.btnBackspace = new CalculatorApp.Models.CalculatorButton ();
+            this.btnClear = new CalculatorApp.Models.CalculatorButton ();
+            this.btnAllClear = new CalculatorApp.Models.CalculatorButton ();
+            this.btnDivide = new CalculatorApp.Models.CalculatorButton ();
+            this.btnMultiply = new CalculatorApp.Models.CalculatorButton ();
+            this.btnNumber7 = new CalculatorApp.Models.CalculatorButton ();
+            this.btnNumber8 = new CalculatorApp.Models.CalculatorButton ();
+            this.btnNumber9 = new CalculatorApp.Models.CalculatorButton ();
+            this.btnNumber4 = new CalculatorApp.Models.CalculatorButton ();
+            this.btnNumber5 = new CalculatorApp.Models.CalculatorButton ();
+            this.btnNumber6 = new CalculatorApp.Models.CalculatorButton ();
+            this.btnSubtract = new CalculatorApp.Models.CalculatorButton ();
+            this.btnNumber1 = new CalculatorApp.Models.CalculatorButton ();
+            this.btnNumber2 = new CalculatorApp.Models.CalculatorButton ();
+            this.btnNumber3 = new CalculatorApp.Models.CalculatorButton ();
+            this.btnAdd = new CalculatorApp.Models.CalculatorButton ();
+            this.btnNumber0 = new CalculatorApp.Models.CalculatorButton ();
+            this.btnDecimal = new CalculatorApp.Models.CalculatorButton ();
+            this.btnEquals = new CalculatorApp.Models.CalculatorButton ();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -353,27 +353,27 @@
 
         #endregion
 
-        private Models.DerivedButton btnBackspace;
+        private Models.CalculatorButton  btnBackspace;
         private System.Windows.Forms.TextBox DisplayTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Models.DerivedButton btnClear;
-        private Models.DerivedButton btnAllClear;
-        private Models.DerivedButton btnDivide;
-        private Models.DerivedButton btnMultiply;
-        private Models.DerivedButton btnNumber7;
-        private Models.DerivedButton btnNumber8;
-        private Models.DerivedButton btnNumber9;
-        private Models.DerivedButton btnNumber4;
-        private Models.DerivedButton btnNumber5;
-        private Models.DerivedButton btnNumber6;
-        private Models.DerivedButton btnSubtract;
-        private Models.DerivedButton btnNumber1;
-        private Models.DerivedButton btnNumber2;
-        private Models.DerivedButton btnNumber3;
-        private Models.DerivedButton btnAdd;
-        private Models.DerivedButton btnNumber0;
-        private Models.DerivedButton btnDecimal;
-        private Models.DerivedButton btnEquals;
+        private Models.CalculatorButton  btnClear;
+        private Models.CalculatorButton  btnAllClear;
+        private Models.CalculatorButton  btnDivide;
+        private Models.CalculatorButton  btnMultiply;
+        private Models.CalculatorButton  btnNumber7;
+        private Models.CalculatorButton  btnNumber8;
+        private Models.CalculatorButton  btnNumber9;
+        private Models.CalculatorButton  btnNumber4;
+        private Models.CalculatorButton  btnNumber5;
+        private Models.CalculatorButton  btnNumber6;
+        private Models.CalculatorButton  btnSubtract;
+        private Models.CalculatorButton  btnNumber1;
+        private Models.CalculatorButton  btnNumber2;
+        private Models.CalculatorButton  btnNumber3;
+        private Models.CalculatorButton  btnAdd;
+        private Models.CalculatorButton  btnNumber0;
+        private Models.CalculatorButton  btnDecimal;
+        private Models.CalculatorButton  btnEquals;
     }
 }
 

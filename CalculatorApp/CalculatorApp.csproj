@@ -55,7 +55,7 @@
     <Compile Include="Models\BaseButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Models\DerivedButton.cs">
+    <Compile Include="Models\CalculatorButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Models\DivisionOperation.cs" />

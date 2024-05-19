@@ -50,7 +50,7 @@ namespace CalculatorApp
 
         private void NumberButton_Click(object sender, EventArgs e)
         {
-            var button = sender as DerivedButton;
+            var button = sender as CalculatorButton ;
             _viewModel.EnterNumber(button.DisplayText);
         }
 
@@ -61,7 +61,7 @@ namespace CalculatorApp
 
         private void OperatorButton_Click(object sender, EventArgs e)
         {
-            var button = sender as DerivedButton;
+            var button = sender as CalculatorButton ;
 
             switch (button.DisplayText)
             {

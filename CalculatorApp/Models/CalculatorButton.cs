@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CalculatorApp.Models
 {
-    internal class DerivedButton : BaseButton
+    internal class CalculatorButton  : BaseButton
     {
         private string _displayText;
 
@@ -26,7 +26,7 @@ namespace CalculatorApp.Models
             }
         }
 
-        public DerivedButton()
+        public CalculatorButton ()
         {
             this.Size = new Size(60, 60);
         }
