@@ -50,6 +50,13 @@ namespace CalculatorApp
             // キーボードイベント処理を有効にする
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(MainForm_KeyDown);
+            // テキストボックスへのフォーカスは他のコントロールに移す
+            DisplayTextBox.Enter += Display_Enter;
+        }
+
+        private void Display_Enter(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
         }
 
         private void NumberButton_Click(object sender, EventArgs e)
