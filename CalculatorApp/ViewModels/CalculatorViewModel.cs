@@ -90,6 +90,25 @@ namespace CalculatorApp.ViewModels
             _isNewOperationButtonPressed = false;
         }
 
+        public void Clear()
+        {
+            DisplayText = "0";
+            _currentValue = 0;
+            _isNewEntry = false;
+            log.Debug("Cleared current entry");
+        }
+
+        public void AllClear()
+        {
+            DisplayText = "0";
+            _currentValue = 0;
+            _currentOperation = null;
+            _newValue = 0;
+            _isNewEntry = false;
+            _isNewOperationButtonPressed = false;
+            log.Debug("All cleared");
+        }
+
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));

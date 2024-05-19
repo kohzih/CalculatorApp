@@ -40,6 +40,9 @@ namespace CalculatorApp
             btnNumber9.Click += NumberButton_Click;
 
             btnEquals.Click += EqualsButton_Click;
+
+            btnClear.Click += ClearButton_Click;
+            btnAllClear.Click += AllClearButton_Click;
         }
 
         private void NumberButton_Click(object sender, EventArgs e)
@@ -74,6 +77,16 @@ namespace CalculatorApp
         private void EqualsButton_Click(object sender, EventArgs e)
         {
             _viewModel.Calculate();
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            _viewModel.Clear();
+        }
+
+        private void AllClearButton_Click(object sender, EventArgs e)
+        {
+            _viewModel.AllClear();
         }
     }
 }

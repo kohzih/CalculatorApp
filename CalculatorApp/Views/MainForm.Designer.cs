@@ -31,8 +31,8 @@
             this.DisplayTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnDelete = new CalculatorApp.Models.DerivedButton();
-            this.btnCE = new CalculatorApp.Models.DerivedButton();
-            this.btnC = new CalculatorApp.Models.DerivedButton();
+            this.btnClear = new CalculatorApp.Models.DerivedButton();
+            this.btnAllClear = new CalculatorApp.Models.DerivedButton();
             this.btnDivide = new CalculatorApp.Models.DerivedButton();
             this.btnMultiply = new CalculatorApp.Models.DerivedButton();
             this.btnNumber7 = new CalculatorApp.Models.DerivedButton();
@@ -72,8 +72,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Controls.Add(this.btnDelete, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnCE, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnC, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnClear, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnAllClear, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnDivide, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnMultiply, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnNumber7, 0, 3);
@@ -118,29 +118,29 @@
             this.btnDelete.Text = "←";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // btnCE
+            // btnClear
             // 
-            this.btnCE.DisplayText = "CE";
-            this.btnCE.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnCE.Location = new System.Drawing.Point(208, 125);
-            this.btnCE.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCE.Name = "btnCE";
-            this.btnCE.Size = new System.Drawing.Size(193, 95);
-            this.btnCE.TabIndex = 3;
-            this.btnCE.Text = "CE";
-            this.btnCE.UseVisualStyleBackColor = true;
+            this.btnClear.DisplayText = "CE";
+            this.btnClear.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnClear.Location = new System.Drawing.Point(208, 125);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(5);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(193, 95);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "CE";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // btnC
+            // btnAllClear
             // 
-            this.btnC.DisplayText = "C";
-            this.btnC.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnC.Location = new System.Drawing.Point(411, 125);
-            this.btnC.Margin = new System.Windows.Forms.Padding(5);
-            this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(193, 95);
-            this.btnC.TabIndex = 4;
-            this.btnC.Text = "C";
-            this.btnC.UseVisualStyleBackColor = true;
+            this.btnAllClear.DisplayText = "C";
+            this.btnAllClear.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnAllClear.Location = new System.Drawing.Point(411, 125);
+            this.btnAllClear.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAllClear.Name = "btnAllClear";
+            this.btnAllClear.Size = new System.Drawing.Size(193, 95);
+            this.btnAllClear.TabIndex = 4;
+            this.btnAllClear.Text = "C";
+            this.btnAllClear.UseVisualStyleBackColor = true;
             // 
             // btnDivide
             // 
@@ -354,8 +354,8 @@
         private Models.DerivedButton btnDelete;
         private System.Windows.Forms.TextBox DisplayTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Models.DerivedButton btnCE;
-        private Models.DerivedButton btnC;
+        private Models.DerivedButton btnClear;
+        private Models.DerivedButton btnAllClear;
         private Models.DerivedButton btnDivide;
         private Models.DerivedButton btnMultiply;
         private Models.DerivedButton btnNumber7;
