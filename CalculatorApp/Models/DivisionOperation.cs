@@ -12,7 +12,7 @@ namespace CalculatorApp.Models
         {
             if (right == 0)
             {
-                throw new DivideByZeroException("ゼロで割ることはできません。");
+                throw new DivideByZeroException("Cannot divide by zero.");
             }
             return left / right;
         }
