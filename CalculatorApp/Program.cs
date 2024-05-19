@@ -23,10 +23,17 @@ namespace CalculatorApp
             logger.Info("Application started");
 
             Application.ThreadException += (sender, e) =>
-            {
-                logger.Error("Unhandled exception", e.Exception);
-                MessageBox.Show("エラーが発生しました。アプリケーションを終了します。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
+            {                
+                if (e.Exception is DivideByZeroException)
+                {
+                    MessageBox.Show("0 で割ることはできません。", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    logger.Error("Unhandled exception", e.Exception);
+                    MessageBox.Show("エラーが発生しました。アプリケーションを終了します。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit();
+                }
             };
 
             Application.EnableVisualStyles();
