@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.DisplayTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnBackspace = new CalculatorApp.Models.CalculatorButton();
@@ -112,7 +113,7 @@
             // 
             this.btnBackspace.DisplayText = "";
             this.btnBackspace.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnBackspace.Image = global::CalculatorApp.Properties.Resources.backspace;
+            this.btnBackspace.Image = ((System.Drawing.Image)(resources.GetObject("btnBackspace.Image")));
             this.btnBackspace.Location = new System.Drawing.Point(437, 108);
             this.btnBackspace.Margin = new System.Windows.Forms.Padding(5);
             this.btnBackspace.Name = "btnBackspace";
@@ -342,6 +343,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 644);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "電卓";
