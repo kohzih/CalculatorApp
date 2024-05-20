@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CalculatorApp.Models;
+using System.Runtime.Remoting.Contexts;
 
 namespace CalculatorApp
 {
@@ -52,6 +53,27 @@ namespace CalculatorApp
             this.KeyDown += new KeyEventHandler(MainForm_KeyDown);
             // テキストボックスへのフォーカスは他のコントロールに移す
             txtDisplay.Enter += Display_Enter;
+            // コピー、貼り付けのコンテキストメニューを設定
+            txtDisplay.ContextMenu = new ContextMenu();
+            txtDisplay.ContextMenu.MenuItems.Add("コピー", new EventHandler(CopyText));
+            txtDisplay.ContextMenu.MenuItems.Add("貼り付け", new EventHandler(PasteText));
+        }
+
+        private void CopyText(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtDisplay.Text))
+            {
+                Clipboard.SetText(txtDisplay.Text);
+            }
+        }
+
+        private void PasteText(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText())
+            {
+                _viewModel.Clear();
+                _viewModel.EnterNumber(Clipboard.GetText());
+            }
         }
 
         private void Display_Enter(object sender, EventArgs e)
@@ -126,6 +148,16 @@ namespace CalculatorApp
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
+            // Ctrl + C の処理
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                CopyText(sender, e);
+            }
+            // Ctrl + V の処理
+            else if (e.Control && e.KeyCode == Keys.V)
+            {
+                PasteText(sender, e);
+            }
             // 数字キーの処理
             if (e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9)
             {
