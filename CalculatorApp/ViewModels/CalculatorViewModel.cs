@@ -108,7 +108,6 @@ namespace CalculatorApp.ViewModels
         public void Clear()
         {
             DisplayText = "0";
-            _currentValue = 0;
             _isEnteringNumber = false;
             log.Debug("Cleared current entry");
         }
