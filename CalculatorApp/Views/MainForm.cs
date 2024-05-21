@@ -20,6 +20,8 @@ namespace CalculatorApp
 
         public MainForm()
         {
+            // TODO: 次の電卓のボタンは未実装です。「%」「1/x」「x^2」「2√x」「+/-」
+            // これらのボタンの機能を実装する必要があります。適切な演算子クラスを作成し、CalculatorViewModelに対応するロジックを追加してください。
             InitializeComponent();
             _viewModel = new CalculatorViewModel();
             txtDisplay.DataBindings.Add(new Binding("Text", _viewModel, "DisplayText", false, DataSourceUpdateMode.OnPropertyChanged));

@@ -97,6 +97,8 @@ namespace CalculatorApp.ViewModels
                 _newValue = double.Parse(DisplayText);
             }
 
+            // TODO: 演算にはdouble型の変数を使用しているため、非常に小さい数や大きな数に対しての、演算精度の問題を修正する必要があります。
+            // Decimal型への変更や、他の数値計算用ライブラリの使用を検討してください。
             double result = _currentOperation.Execute(_currentValue, _newValue);
             log.Debug($"Calculated result: {_currentValue} {_currentOperation.GetType().Name} {_newValue} = {result}");
             DisplayText = (result == (int)result) ? result.ToString() : result.ToString("0.#####");
